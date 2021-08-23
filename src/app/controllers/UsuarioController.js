@@ -19,7 +19,7 @@ class UsuarioController {
             if(error.code == 'ER_DUP_ENTRY')
                 response.status(409).json(error);
             else
-                response.status(500).json({message: "Falha interna na criação de usuário."});
+                response.status(500).json({message: "Falha interna na criação de usuário.", error});
         });
     }
 
